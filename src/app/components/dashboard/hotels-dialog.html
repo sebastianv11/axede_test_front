@@ -1,0 +1,50 @@
+
+<mat-dialog-content class="mat-typography">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+          <mat-card class="dashboard-card" *ngFor="let item of hotelsItems">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ item.name }}</mat-card-title>
+              <mat-card-subtitle>Capacidad de personas - <b>{{ item.peopleCapacity }}</b></mat-card-subtitle>
+              <mat-card-subtitle>Capacidad de habitaciones - <b>{{ item.roomsCapacity }}</b></mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/hotelroom.jpg" alt="Photo of city">
+            <mat-card-content>
+              <p>Capacidad maxima por habitacion: <b>{{item.premium.capacity}}</b></p>
+              <div *ngIf="item.premium.roomsLeft > 0">
+                <b style="color: #e03232">Habitaciones Premium</b>
+                <br>
+                <b>Precio en temporada alta: </b>{{ item.premium.highSeasonPrice }}
+                <br>
+                <b>Precio en temporada baja: </b>{{ item.premium.lowSeasonPrice }}
+              </div>
+              <div *ngIf="item.vip.roomsLeft > 0">
+                <b style="color: #e03232">Habitaciones VIP</b>
+                <br>
+                <b>Precio en temporada alta: </b>{{ item.vip.highSeasonPrice }}
+                <br>
+                <b>Precio en temporada baja: </b>{{ item.vip.lowSeasonPrice }}
+              </div>
+              <div *ngIf="item.standard.roomsLeft > 0">
+                <b style="color: #e03232">Habitaciones Estandar</b>
+                <br>
+                <b>Precio en temporada alta: </b>{{ item.standard.highSeasonPrice }}
+                <br>
+                <b>Precio en temporada baja: </b>{{ item.standard.lowSeasonPrice }}
+              </div>
+              <div></div>
+              <div></div>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Realizar reservacion</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cerrar</button>
+</mat-dialog-actions>
+

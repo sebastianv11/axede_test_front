@@ -1,0 +1,49 @@
+/* Estilos para el contenedor de las cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Estilos para cada card del dashboard */
+.dashboard-card {
+  width: calc(33.33% - 20px); /* Tamaño máximo de 3 cards por fila, con espacio entre ellas */
+  margin-bottom: 20px;
+}
+
+.card-image {
+  background-color: #ccc; /* Color de fondo para la imagen */
+  width: 64px; /* Ancho de la imagen */
+  height: 64px; /* Altura de la imagen */
+  border-radius: 50%; /* Borde redondeado para la imagen (círculo) */
+  margin-right: 10px;
+}
+
+/* Estilos para el sidebar */
+.sidenav {
+  font-weight: 550;
+  width: 250px;
+  background-color: #673ab7; /* Color de fondo del sidebar */
+  color: white; /* Color del texto en el sidebar */
+}
+
+.active-link {
+  background-color: rgb(255, 255, 255); /* Color de fondo del botón activo */
+}
+
+.logout-button {
+  width: 100%;
+  text-align: left;
+  color: white;
+  margin-top: auto;
+}
+
+/* Estilos adicionales para el contenido */
+.dashboard-content {
+  padding: 20px;
+}
+.sidenav-container {
+  height: 100vh;
+  color: white;
+}
